@@ -7,9 +7,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: yellowgreen;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input {
+  border-radius: 8px;
+  border: none;
+  margin-left: 5px;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(244, 186, 186);
+}
+
+button:hover {
+  background-color: rgb(52, 56, 139);
 }
