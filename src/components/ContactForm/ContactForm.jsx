@@ -36,12 +36,15 @@ export const ContactForm = () => {
       name: nameValue,
       phone: phoneValue,
     };
-    validInput
-      ? toast.info(
-          `${nameValue} or phone ${phoneValue}: is already in contacts `,
-          notifyOptions
-        )
-      : dispatch(addContact(objectSubmit));
+    if (validInput) {
+      toast.info(
+        `${nameValue} or phone ${phoneValue}: is already in contacts `,
+        notifyOptions
+      );
+    } else {
+      dispatch(addContact(objectSubmit));
+      toast.success('Contact added');
+    }
     e.target.reset();
   };
 
